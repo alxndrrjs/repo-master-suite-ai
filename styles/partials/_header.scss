@@ -1,0 +1,152 @@
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 15;
+    background: $header__background;
+    transition: background-color 0.3s ease;
+    
+    .header__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 1% 5%;
+        align-items: center;
+        gap: 20px;
+
+        .header__logo {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+
+            svg {
+                width: 45px;
+                fill: #fff;
+                transition: fill .3s ease-in-out;
+            }
+
+            h2 {
+                font-family: $font__noto;
+                color: $header__logo-text-color;
+                transition: color .3s ease-in-out;
+
+                span {
+                    color: $header__logo-subtext-color;
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+        
+        .header__sections {
+            .header__links {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                gap: 45px;
+    
+                .header__link {
+                    display: inline-block;
+                    font-size: $header__link-font-size;
+                    font-family: $font__noto;
+                    color: $header__link-color;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    text-align: center;
+                    transition: color .3s ease;
+                    
+                    a {
+                        all: unset;
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        color: $header__link-color-hover;
+                    }
+                }
+            }
+        }
+
+        .header__acc {
+            display: inline-flex;
+            align-items: center;
+            .select__language {
+                all: unset;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                border-radius: 50%;
+                transition: all .3s ease-in-out;
+                
+                svg {
+                    width: 28px;
+                    height: auto;
+                    padding: 8px;
+                    stroke: #fff;
+                    stroke-width: 2px;
+                    transition: all .3s ease-in-out;
+                }
+
+                &:hover {
+                    background-color: $header__background-white;
+
+                    svg {
+                        stroke: $header__link-color-header-white;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.scrolled {
+    background: $header__background-white;
+
+    .header__logo {
+        svg {
+            fill: $header__logo-color !important;
+        }
+
+        h2 {
+            color: $header__logo-text-header-white-color !important;
+
+            span {
+                text-shadow: 
+                    -1px -1px 0 $header__logo-text-header-white-color,  
+                    1px -1px 0 $header__logo-text-header-white-color,  
+                    -1px  1px 0 $header__logo-text-header-white-color,  
+                    1px  1px 0 $header__logo-text-header-white-color; /* 4 sombras simulando un borde */
+            }
+        }
+    }
+
+    .header__link {
+        color: $header__link-color-header-white !important;
+
+        &:hover {
+            color: $header__link-color-hover !important;
+        }
+    }
+
+    .header__acc {
+
+        .select__language {
+            svg {
+                fill: $header__link-color-header-white !important;
+                stroke: $header__link-color-header-white !important;
+            }
+
+            &:hover {
+                background-color: $header__back-color-hover !important;
+
+                svg {
+                    stroke: $header__link-color !important;
+                }
+            }
+        }
+    }
+}

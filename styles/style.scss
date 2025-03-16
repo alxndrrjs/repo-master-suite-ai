@@ -1,0 +1,9 @@
+@import 'lib/variables';
+
+@import 'partials/header';
+@import 'partials/banner';
+
+body {
+    margin: 0;
+    font-family: $font__source;
+}

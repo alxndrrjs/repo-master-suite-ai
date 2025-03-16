@@ -1,0 +1,12 @@
+.banner {
+    position: relative;
+    height: 300vh;
+    background: $banner__background-gradient;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+    }
+}
