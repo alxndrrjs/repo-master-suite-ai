@@ -9,18 +9,21 @@ header {
   z-index: 15;
   background: transparent;
   transition: background-color 0.3s ease;
+  display: flex;
 }
 .header .header__content {
-  display: flex;
-  justify-content: space-between;
-  padding: 1% 5%;
+  display: inline-flex;
+  padding: 1% 35px;
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 .header .header__content .header__logo {
   display: inline-flex;
   gap: 10px;
   align-items: center;
+  justify-content: flex-start;
 }
 .header .header__content .header__logo svg {
   width: 45px;
@@ -38,8 +41,9 @@ header {
 }
 .header .header__content .header__sections .header__links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding: 0;
   margin: 0;
   gap: 45px;
 }
@@ -63,6 +67,8 @@ header {
 .header .header__content .header__acc {
   display: inline-flex;
   align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
 }
 .header .header__content .header__acc .select__language {
   all: unset;
@@ -85,6 +91,35 @@ header {
 }
 .header .header__content .header__acc .select__language:hover svg {
   stroke: #3a3a3a;
+}
+.header .header__content .header__acc .login__link {
+  all: unset;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, 0.1019607843);
+  border-radius: 8px;
+  padding: 6px 14px;
+  transition: all 0.3s ease-in-out;
+}
+.header .header__content .header__acc .login__link:hover {
+  background-color: #fff;
+  color: #3a3a3a;
+}
+.header .header__content .header__acc .register__link {
+  all: unset;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.1019607843);
+  border-radius: 8px;
+  padding: 6px 14px;
+  transition: all 0.3s ease-in-out;
+}
+.header .header__content .header__acc .register__link:hover {
+  background-color: #fff;
+  color: #3a3a3a;
 }
 
 .scrolled {
@@ -115,6 +150,22 @@ header {
 .scrolled .header__acc .select__language:hover svg {
   stroke: #fff !important;
 }
+.scrolled .header__acc .login__link {
+  color: #3a3a3a !important;
+  border: 2px solid rgba(0, 0, 0, 0.1019607843) !important;
+}
+.scrolled .header__acc .login__link:hover {
+  background-color: #3a3a3a !important;
+  color: #fff !important;
+}
+.scrolled .header__acc .register__link {
+  color: #3a3a3a !important;
+  background-color: rgba(0, 0, 0, 0.1019607843) !important;
+}
+.scrolled .header__acc .register__link:hover {
+  background-color: #3a3a3a !important;
+  color: #fff !important;
+}
 
 .banner {
   position: relative;
@@ -131,4 +182,9 @@ header {
 body {
   margin: 0;
   font-family: "Source Sans 3";
+}
+
+a {
+  all: unset;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

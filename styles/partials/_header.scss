@@ -1,6 +1,6 @@
 header {
     display: block;
-    unicode-bidi: isolate;
+    unicode-bidi: isolate;  
 }
 
 .header {
@@ -9,25 +9,28 @@ header {
     z-index: 15;
     background: $header__background;
     transition: background-color 0.3s ease;
+    display: flex;
     
     .header__content {
-        display: flex;
-        justify-content: space-between;
-        padding: 1% 5%;
+        display: inline-flex;
+        padding: 1% 35px;
+        width: 100%;
         align-items: center;
+        justify-content: space-between;
         gap: 20px;
 
         .header__logo {
             display: inline-flex;
             gap: 10px;
             align-items: center;
+            justify-content: flex-start;
 
             svg {
                 width: 45px;
                 fill: #fff;
                 transition: fill .3s ease-in-out;
             }
-
+            
             h2 {
                 font-family: $font__noto;
                 color: $header__logo-text-color;
@@ -43,8 +46,9 @@ header {
         .header__sections {
             .header__links {
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
+                padding: 0;
                 margin: 0;
                 gap: 45px;
     
@@ -73,6 +77,9 @@ header {
         .header__acc {
             display: inline-flex;
             align-items: center;
+            gap: 10px;
+            justify-content: flex-end;
+
             .select__language {
                 all: unset;
                 display: flex;
@@ -98,6 +105,39 @@ header {
                     }
                 }
                 
+            }
+
+            .login__link {
+                all: unset;
+                cursor: pointer;
+                color: $header__link-color;
+                font-weight: 700;
+                border: 2px solid $header__acc-back-border;
+                border-radius: 8px;
+                padding: 6px 14px;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    background-color: $header__background-white;
+                    color: $header__link-color-header-white;
+                }
+            }
+
+            .register__link {
+                all: unset;
+                cursor: pointer;
+                color: $header__link-color;
+                font-weight: 700;
+                border: 2px solid #FFFFFF00;
+                background-color: $header__acc-back-border;
+                border-radius: 8px;
+                padding: 6px 14px;
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    background-color: $header__background-white;
+                    color: $header__link-color-header-white;
+                }
             }
         }
     }
@@ -146,6 +186,26 @@ header {
                 svg {
                     stroke: $header__link-color !important;
                 }
+            }
+        }
+
+        .login__link {
+            color: $header__link-color-header-white !important;
+            border: 2px solid $header__acc-back-border-header-white !important;
+
+            &:hover {
+                background-color: $header__back-color-hover !important;
+                color: $header__link-color !important;
+            }
+        }
+
+        .register__link {
+            color: $header__link-color-header-white !important;
+            background-color: $header__acc-back-border-header-white !important;
+
+            &:hover {
+                background-color: $header__back-color-hover !important;
+                color: $header__link-color !important;
             }
         }
     }
