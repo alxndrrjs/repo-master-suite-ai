@@ -1,0 +1,22 @@
+@keyframes wheel {
+    0% {
+        bottom: 5%;
+    }
+    50% {
+        bottom: 4%;
+    }
+    100% {
+        bottom: 5%;
+    }
+}
+
+// @keyframes wheel {
+//     0% {
+//         top: 5px;
+//         opacity: 1;
+//     }
+//     100% {
+//         opacity: 0;
+//         top: 27px;
+//     }
+// }

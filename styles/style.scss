@@ -1,7 +1,9 @@
 @import 'lib/variables';
+@import 'lib/keyframes';
 
 @import 'partials/header';
 @import 'partials/banner';
+@import 'partials/solutions';
 
 body {
     margin: 0;
@@ -11,4 +13,14 @@ body {
 a {
     all: unset;
     cursor: pointer;
+}
+
+.sec_pad {
+    padding: 12rem 0;
+}
+
+.main-container {
+    max-width: 120rem;
+    margin: auto;
+    width: 92%;
 }

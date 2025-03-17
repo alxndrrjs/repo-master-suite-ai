@@ -10,6 +10,7 @@ header {
     background: $header__background;
     transition: background-color 0.3s ease;
     display: flex;
+    z-index: 500;
     
     .header__content {
         display: inline-flex;
@@ -111,7 +112,7 @@ header {
                 all: unset;
                 cursor: pointer;
                 color: $header__link-color;
-                font-weight: 700;
+                font-weight: $links-font__weight;
                 border: 2px solid $header__acc-back-border;
                 border-radius: 8px;
                 padding: 6px 14px;
@@ -127,7 +128,7 @@ header {
                 all: unset;
                 cursor: pointer;
                 color: $header__link-color;
-                font-weight: 700;
+                font-weight: $links-font__weight;
                 border: 2px solid #FFFFFF00;
                 background-color: $header__acc-back-border;
                 border-radius: 8px;
